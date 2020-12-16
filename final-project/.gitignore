@@ -1,0 +1,4 @@
+Pods
+*.xcodeproj
+*.xcworkspace
+*.xcassets
