@@ -79,4 +79,12 @@ class HomeViewController: UITableViewController {
         UIApplication.shared.keyWindow?.rootViewController = initial
         
     }
+    
+    // this method handles row deletion
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            TransactionManager.main.delete(transaction: transactions[indexPath.row])
+            reload()
+        }
+    }
 }

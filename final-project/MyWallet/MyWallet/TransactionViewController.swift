@@ -18,6 +18,25 @@ class TransactionViewController: UIViewController {
     @IBOutlet var type: UIPickerView!
     @IBOutlet var date: UITextField!
     
+    @IBAction func deleteButton() {
+        let confirmAlert = UIAlertController(title: "Are you sure?", message: nil, preferredStyle: .alert)
+
+        confirmAlert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (action: UIAlertAction!) in
+            self.deleteTransaction()
+        }))
+
+        confirmAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+              return
+        }))
+        
+        self.present(confirmAlert, animated: true, completion: nil)
+    }
+    
+    private func deleteTransaction() {
+        TransactionManager.main.delete(transaction: transaction)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         if transaction.type == "Income" {
