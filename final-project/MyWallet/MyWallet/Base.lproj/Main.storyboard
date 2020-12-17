@@ -318,12 +318,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NY4-Lf-0ze">
-                                <rect key="frame" x="148" y="481" width="126" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoU-CK-Glp">
                                 <rect key="frame" x="168" y="698" width="86" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -333,6 +327,10 @@
                                     <action selector="createTransaction" destination="s3q-Eh-WEX" eventType="touchUpInside" id="mmJ-K9-QWw"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IGH-8U-24B">
+                                <rect key="frame" x="148" y="470" width="126" height="57"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cDF-cq-vAU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -341,12 +339,12 @@
                     <connections>
                         <outlet property="amount" destination="HXh-nC-dse" id="7df-fz-0SQ"/>
                         <outlet property="name" destination="L3r-bW-SRU" id="4xv-Tc-syi"/>
-                        <outlet property="type" destination="NY4-Lf-0ze" id="sPo-OC-NBr"/>
+                        <outlet property="type" destination="IGH-8U-24B" id="n1j-pF-j6t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kcd-IV-pJ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4338" y="-135"/>
+            <point key="canvasLocation" x="4337.68115942029" y="-135.26785714285714"/>
         </scene>
         <!--Update transaction-->
         <scene sceneID="nlL-c0-Ype">
@@ -402,12 +400,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMD-Ya-kmB">
-                                <rect key="frame" x="144" y="489" width="126" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cAu-5a-sec">
+                                <rect key="frame" x="144" y="478" width="126" height="57"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EhY-A8-mVw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -417,7 +413,7 @@
                         <outlet property="amount" destination="d85-nx-DE4" id="mym-7o-wPe"/>
                         <outlet property="date" destination="T5x-VX-d61" id="Q52-IQ-RLa"/>
                         <outlet property="name" destination="br1-2z-iLs" id="chx-9B-9M7"/>
-                        <outlet property="type" destination="wMD-Ya-kmB" id="iIA-3Z-o6f"/>
+                        <outlet property="type" destination="cAu-5a-sec" id="urD-FF-R76"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVs-pP-rXt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
