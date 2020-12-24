@@ -9,17 +9,22 @@ import UIKit
 import Firebase
 
 class StartViewController: UIViewController {
+    
+    @IBOutlet var loginButton: UIButton!
+    @IBOutlet var signInButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if Auth.auth().currentUser != nil {
+            self.performSegue(withIdentifier: "StartToHomeSegue", sender: nil)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool){
         super.viewDidAppear(animated)
-        if Auth.auth().currentUser != nil {
-            self.performSegue(withIdentifier: "StartToHomeSegue", sender: nil)
-        }
     }
 
 }

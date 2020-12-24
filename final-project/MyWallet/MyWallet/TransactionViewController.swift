@@ -18,6 +18,10 @@ class TransactionViewController: UIViewController {
     @IBOutlet var type: UIPickerView!
     @IBOutlet var date: UITextField!
     
+    @IBAction func updateTransaction() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func deleteButton() {
         let confirmAlert = UIAlertController(title: "Are you sure?", message: nil, preferredStyle: .alert)
 

@@ -34,7 +34,18 @@ class HomeViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath)
-        cell.textLabel?.text = transactions[indexPath.row].name
+        
+        let type = transactions[indexPath.row].type
+        
+        if type == "Income" {
+            cell.textLabel?.textColor = UIColor(red: 0, green: 0.5, blue: 0, alpha: 1)
+        }
+        else {
+            cell.textLabel?.textColor = UIColor(red: 0.9, green: 0, blue: 0, alpha: 1)
+        }
+        
+        cell.textLabel?.text = "$\(transactions[indexPath.row].amount)"
+        cell.detailTextLabel?.text = transactions[indexPath.row].name
 //        ~~~~~~~~~~~~~~ CHANGE COLOR OF CELLS HERE ~~~~~~~~~~~~~~
         return cell
     }
